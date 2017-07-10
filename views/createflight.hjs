@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    	<h1>Create Flight</h1>
+		<form action="/api/flight" method="post">
+		   	<input type="text" name="name" placeholder="Name"/>
+		   	<input type="text" name="image" placeholder="Image"/>
+		   	<br>
+		   	<input type="submit" value="Create Flight" />
+		</form>
+  </body>
+</html>

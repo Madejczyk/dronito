@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    	<h1>Create Drone</h1>
+		<form action="/api/drone" method="post">
+		   	<input type="text" name="model" placeholder="Model"/>
+		   	<input type="text" name="kind" placeholder="Kind"/>
+		   	<input type="text" name="image" placeholder="Image"/>
+		   	<br>
+		   	<input type="submit" value="Create Drone" />
+		</form>
+  </body>
+</html>

@@ -7,7 +7,7 @@ class Comment extends Component{
 		return(		
 			<div style={style.commentElement}>
 				<span style={{fontSize:20, fontWeight:600}}>
-					{this.props.currentComment.username} -
+					{this.props.currentComment.username} - 
 					{this.props.currentComment.timestamp}
 				</span>
 				<p>

@@ -1,19 +1,21 @@
 import React, {Component} from 'react'
-import {Drones} from "../containers"
-class Home extends Component{
+import {Comments, Zones} from '../containers'
+
+class ZoneHome extends Component{
 	render(){
 		return(
 			<div className='container'>
 				<div className='row'>
 					<div className='col-md-4'>
-						Account
+						<Zones />
 					</div>
 					<div className='col-md-8'>
-						<Drones />
+						<Comments />
 					</div>
 				</div>
 			</div>
 		)
 	}
 }
-export default Home
+
+export default ZoneHome

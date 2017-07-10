@@ -1,6 +1,5 @@
 var express = require('express')
 var router = express.Router()
-var ZoneController = require('../controllers/ZoneController')
 var controllers = require('../controllers')
 
 router.get('/:resource',(req, res, next) => {
@@ -15,24 +14,23 @@ router.get('/:resource',(req, res, next) => {
 		return
 	}
 
-	controller.find(req.query, (err, results) => {
-		if(err){
-			res.json({
-			confirmation:'fail',
-			message: err
-			})
-			return
-		}
+	controller.get(req.query, false)
+	.then((results) => {
 		res.json({
 			confirmation: 'success',
 			results: results
+		})
+	})
+	.catch((err) => {
+		res.json({
+		confirmation:'fail',
+		message: err
 		})
 	})
 })
 
 router.get('/:resource/:id',(req, res, next) =>{
 	var resource = req.params.resource
-	var id = req.params.id
 	var controller = controllers[resource]
 
 	if(controller == null){
@@ -42,19 +40,18 @@ router.get('/:resource/:id',(req, res, next) =>{
 		})
 		return
 	}
-
-	controller.findById(id, (err,result) =>{
-		if (err){
-				res.json({
-				confirmation:'fail',
-				message: 'Not found'
-			})
-			return
-		}
-
+	
+	controller.getById(req.params.id, false)
+	.then((result) => {
 		res.json({
 			confirmation: 'success',
 			results: result
+		})
+	})
+	.catch((err) => {
+		res.json({
+		confirmation:'fail',
+		message: 'Not found'
 		})
 	})
 })
@@ -71,17 +68,17 @@ router.post('/:resource',(req, res, next) => {
 		return
 	}
 
-	controller.create(req.body,(err, result) => {
-		if(err){
-			res.json({
-				confirmation:'fail',
-				message: err
-			})
-			return
-		}
+	controller.post(req.body, false)
+	.then((result) => {
 		res.json({
 			confirmation: 'success',
 			results: result
+		})
+	})
+	.catch((err) => {
+		res.json({
+		confirmation:'fail',
+		message: err
 		})
 	})
 })

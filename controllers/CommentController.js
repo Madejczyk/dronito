@@ -1,7 +1,43 @@
 var Comment = require('../models/Comment')
+var Promise = require('bluebird')
 
 module.exports = {
-	find(params, callback){
+	get: (params, isRaw) => {
+		return new Promise((resolve, reject) => {
+			Comment.find(params, (err, comments) => {
+				if(err){
+					reject(err)
+					return
+				}
+				resolve(comments)
+			})
+		})
+	},
+
+	getById: (id, isRaw) => {
+		return new Promise((resolve, reject) => {
+			Comment.findById(id, (err, comment) => {
+				if(err){
+					reject(err)
+					return
+				}
+				resolve(comment)
+			})
+		})
+	},
+
+	post: (params, isRaw) => {
+		return new Promise((resolve, reject) => {
+			Comment.create(params, (err, comment) => {
+				if(err){
+					reject(err)
+					return
+				}
+				resolve(comment)
+			})
+		})	
+	}
+/*	get(params, callback){
 		Comment.find(params,(err, comment) => {
 			if (err){
 				callback(err, null)
@@ -11,7 +47,7 @@ module.exports = {
 		})
 	},
 
-	findById(id, callback){
+	getById(id, callback){
 		Comment.findById(id,(err, comment) => {
 			if (err){
 				callback(err, null)
@@ -50,5 +86,5 @@ module.exports = {
 
 			callback(null, null)
 		})
-	}
+	}*/
 }

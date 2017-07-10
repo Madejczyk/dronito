@@ -1,54 +1,42 @@
 import React, {Component} from 'react'
-import Comment from '../presentation/Comment'
+import {CreateComment, Comment} from '../presentation'
 import styles from './styles'
-import superagent from 'superagent'
+import {APIManager} from '../../utils'
 
 class Comments extends Component{
 	constructor(){
 		super()
 		this.state = {
-			comment: {
-				username: '',
-				body: '',
-				timestamp: '',
-			},
 			list: []
 		}
 	}
 
 	componentDidMount(){
-		superagent
-		.get('/api/comment')
-		.query(null)
-		.set('Accept', 'application/json')
-		.end((err,response) => {
+		APIManager.get('/api/comment', null, (err, response) => {
 			if(err){
-				alert('Error:' + err)
+				alert('Error:' + err.message)
 				return
 			}
-			
-			let results = response.body.results
+
 			this.setState({
-				list: results
+				list: response.results
 			})
 		})
 	}
 
-	updateComment(event){
-		let updatedComment = Object.assign({}, this.state.comment)
-		updatedComment[event.target.id] = event.target.value
-		this.setState({
-			comment: updatedComment
-		})
-	}
-
-	submitComment(){
-		console.log("test" + JSON.stringify(this.state.comment))
-		let updatedList = Object.assign([], this.state.list)
-		updatedList.push(this.state.comment)
-
-		this.setState({
-			list: updatedList
+	submitComment(comment){
+		let updatedComment = Object.assign({}, comment)
+		APIManager.post('/api/comment', updatedComment, (err, response) =>{
+			if(err){
+				alert(err)
+				return
+			}
+			let updatedList = Object.assign([], this.state.list)
+			updatedList.push(response.results)
+			this.setState({
+				list: updatedList
+			})
+ 
 		})
 	}
 
@@ -68,10 +56,7 @@ class Comments extends Component{
 					</ul>
 				</div>
 
-				<input id="username" onChange={this.updateComment.bind(this)} className="form-control" type="text" placeholder="Username" />
-				<input id="body" onChange={this.updateComment.bind(this)} className="form-control" type="text" placeholder="Comment" />
-				<input id="timestamp" onChange={this.updateComment.bind(this)} className="form-control" type="text" placeholder="Time" />
-				<button onClick={this.submitComment.bind(this)} className="btn btn-info">Submit</button>
+				<CreateComment onCreate={this.submitComment.bind(this)} />
 			</div>
 		)
 	}

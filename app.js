@@ -5,14 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+require('dotenv').config()
 
-var dbUrl = 'mongodb://localhost/dronito';
-mongoose.connect(dbUrl, function(err,res){
+mongoose.connect(process.env.DB_URL, function(err,res){
 	if (err){
 		console.log('Database connection failed: ' + err);
 	}
 	else{
-		console.log('Database connection success: ' + dbUrl);
+		console.log('Database connection success');
 	}
 });
 

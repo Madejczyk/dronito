@@ -1,64 +1,40 @@
 var Zone = require('../models/Zone')
+var Promise = require('bluebird')
 
 module.exports = {
-	find(params, callback){
-		Zone.find(params,(err, zones) => {
-			if (err){
-				callback(err, null)
-				return
-			}
-			callback(null, zones)			
+	get: (params, isRaw) => {
+		return new Promise((resolve, reject) =>{
+			Zone.find(params, (err, zones) =>{
+				if(err){
+					reject(err)
+					return
+				}
+				resolve(zones)
+			})
 		})
 	},
 
-	findById(id, callback){
-		Zone.findById(id,(err, zone) => {
-			if (err){
-				callback(err, null)
-				return
-			}
-			callback(null, zone)			
-		})
-	},
-	create(params, callback){
-		var zips = params['zipCodes']
-		var zip = zips.split(',')
-		var newZips = []
-
-		zip.forEach((zipCode) => {
-			newZips.push(zipCode.trim())
-		})
-
-		params['zipCodes'] = newZips
-
-		Zone.create(params,(err, zone) => {
-			if (err){
-				callback(err, null)
-				return
-			}
-			callback(null, zone)	
+	getById: (id, isRaw) => {
+		return new Promise((resolve, reject) =>{
+			Zone.findById(id, (err, zone) =>{
+				if(err){
+					reject(err)
+					return
+				}
+				resolve(zone)
+			})
 		})
 	},
 
-	update(id, params, callback){
-		Zone.findByIdAndUpdate(id, params, {new: true}, (err,zone) => {
-			if (err){
-				callback(err, null)
-				return
-			}
-
-			callback(null, zone)
-		})
-	},
-
-	delete(id, callback){
-		Zone.findByIdAndRemove(id, (err) => {
-			if (err){
-				callback(err, null)
-				return
-			}
-
-			callback(null, null)
-		})
+	post: (params, isRaw) => {
+		return new Promise((resolve, reject) =>{
+			Zone.create(params, (err, zone) =>{
+				if(err){
+					reject(err)
+					return
+				}
+				resolve(zone)
+			})
+		})	
 	}
 }

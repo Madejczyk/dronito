@@ -1,16 +1,17 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import Home from './components/layout/Home'
+import {Home} from './components/layout'
+//import {Drones} from "./components/containers"
+import store from './stores'
+import {Provider} from 'react-redux'
 
-class App extends Component{
-	render(){
-		return (
-			<div>
-				Dronito
-				<Home />
-			</div>
-		)
-	}
-}
+const app = (
+	<Provider store={store.configureStore()}>
+	<div>
+		Dronito
+		<Home />
+	</div>
+	</Provider>
+)
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(app, document.getElementById('root'))
