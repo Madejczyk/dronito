@@ -6,8 +6,10 @@
   <body>
     	<h1>Create Profile</h1>
 		<form action="/api/profile" method="post">
+		   	<input type="text" name="firstname" placeholder="First Name"/>
 		   	<input type="text" name="username" placeholder="User Name"/>
-		   	<input type="text" name="password" placeholder="Password"/>
+		   	<input type="text" name="email" placeholder="Email">
+		   	<input type="password" name="password" placeholder="Password"/>
 		   	<br>
 		   	<input type="submit" value="Create Profile" />
 		</form>

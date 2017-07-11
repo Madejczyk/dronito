@@ -51,7 +51,7 @@ router.get('/:resource/:id',(req, res, next) =>{
 	.catch((err) => {
 		res.json({
 		confirmation:'fail',
-		message: 'Not found'
+		message: resource+' '+req.params.id+' not found'
 		})
 	})
 })

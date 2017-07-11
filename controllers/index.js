@@ -1,13 +1,15 @@
-var ZoneController = require('./ZoneController')
+var AlertController = require('./AlertController')
 var CommentController = require('./CommentController')
 var DroneController = require('./DroneController')
-var ProfileController = require('./ProfileController')
 var FlightController = require('./FlightController')
+var ProfileController = require('./ProfileController')
+var ZoneController = require('./ZoneController')
 
 module.exports = {
+	alert: AlertController,
 	comment: CommentController,
-	zone: ZoneController,
 	drone: DroneController,
 	flight: FlightController,
-	profile: ProfileController
+	profile: ProfileController,
+	zone: ZoneController
 }

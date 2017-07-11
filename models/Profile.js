@@ -1,16 +1,20 @@
 var mongoose = require('mongoose')
 
 var ProfileSchema = new mongoose.Schema({
-	username: {type:String, default:''},
+	username: {type:String, trim: true, default:''},
+	firstname: {type:String, trim: true, default:''},
+	email: {type:String, trim: true, lowercase:true, default:''},
 	password: {type:String, default:''},
 	timestamp: {type:Date, default: Date.now}
 })
 
 ProfileSchema.methods.summary = function(){
 	var summary = {
+		id: this._id.toString(),
 		username: this.username,
-		timestamp: this.timestamp,
-		id: this._id.toString()
+		firstName: this.firstname,
+		email: this.email,
+		timestamp: this.timestamp
 	}
 	return summary
 }

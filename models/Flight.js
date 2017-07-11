@@ -2,7 +2,7 @@ var mongoose = require('mongoose')
 
 var FlightSchema = new mongoose.Schema({
 	profile: {type:mongoose.Schema.Types.Mixed, default:{}},
-	name: {type:String, default:''},
+	name: {type:String, trim: true, default:''},
 	image: {type:String, default:''},
 	timestamp: {type:Date, default: Date.now}
 })

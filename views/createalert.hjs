@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    	<h1>Create Alert</h1>
+		<form action="/api/alert" method="post">
+		   	<input name="lat" type="text" placeholder="Latitude" />
+			<input name="lng" type="text" placeholder="Longitude" />
+			<input name="key" type="text" placeholder="Key" />
+			<input type="submit" value="Create Alert" />
+		</form>
+  </body>
+</html>
+<!-- ToDo lat + LNG -->

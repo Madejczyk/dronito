@@ -3,7 +3,15 @@ var router = express.Router()
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
+  res.render('login', { title: 'Login' })
+})
+
+/*router.get('/', (req, res, next) => {
   res.render('index', { title: 'Dronito' })
+})*/
+
+router.get('/createalert', (req, res, next) => {
+  res.render('createalert', { title: 'Create alert' })
 })
 
 router.get('/createcomment', (req, res, next) => {
