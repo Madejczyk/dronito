@@ -2,15 +2,17 @@
 <html>
   <head>
     <title>{{ title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets-dark/css/main.css" />
   </head>
   <body>
     	<h1>Create Drone</h1>
 		<form action="/api/drone" method="post">
-		   	<input type="text" name="model" placeholder="Model"/>
-		   	<input type="text" name="title" placeholder="Title"/>
-		   	<input type="text" name="description" placeholder="Description"/>
-		   	<input type="text" name="image" placeholder="Image"/>
-		   	<br>
+		   	<input type="text" name="model" placeholder="Model"/><br/>
+		   	<input type="text" name="title" placeholder="Title"/><br/>
+		   	<input type="text" name="description" placeholder="Description"/><br/>
+		   	<input type="text" name="image" placeholder="Image"/><br/>
 		   	<input type="submit" value="Create Drone" />
 		</form>
   </body>

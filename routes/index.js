@@ -3,12 +3,12 @@ var router = express.Router()
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('login', { title: 'Login' })
+  res.render('index', { title: 'Dronito' })
 })
 
-/*router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Dronito' })
-})*/
+router.get('/login', (req, res, next) => {
+  res.render('login', { title: 'Login' })
+})
 
 router.get('/createalert', (req, res, next) => {
   res.render('createalert', { title: 'Create alert' })

@@ -15859,8 +15859,7 @@ const app = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 	__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 		'div',
 		null,
-		'Dronito',
-		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_layout__["a" /* Home */], null)
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_layout__["d" /* Home */], null)
 	)
 );
 
@@ -27087,12 +27086,24 @@ module.exports = ReactDOMInvalidARIAHook;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Home__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MapHome__ = __webpack_require__(381);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ZoneHome__ = __webpack_require__(577);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Content__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__DroneHome__ = __webpack_require__(582);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Footer__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Header__ = __webpack_require__(584);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Home__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__MapHome__ = __webpack_require__(381);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ZoneHome__ = __webpack_require__(577);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Content__["a"]; });
+/* unused harmony reexport DroneHome */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__Footer__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__Header__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_4__Home__["a"]; });
 /* unused harmony reexport MapHome */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Home__["a"]; });
 /* unused harmony reexport ZoneHome */
+
+
+
+
 
 
 
@@ -27106,28 +27117,17 @@ module.exports = ReactDOMInvalidARIAHook;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1____ = __webpack_require__(330);
 
 
 class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 	render() {
 		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-			'div',
-			{ className: 'container' },
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				'div',
-				{ className: 'row' },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'col-md-4' },
-					'Account'
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'col-md-8' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers__["c" /* Drones */], null)
-				)
-			)
+			"div",
+			{ id: "wrapper" },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["c" /* Header */], null),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["a" /* Content */], null),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["b" /* Footer */], null)
 		);
 	}
 }
@@ -46135,6 +46135,358 @@ var initialState = {
 			return updated;
 	}
 });
+
+/***/ }),
+/* 582 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers__ = __webpack_require__(100);
+
+
+class DroneHome extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+	render() {
+		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			'div',
+			{ className: 'container' },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ className: 'row' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'col-md-4' },
+					'Account'
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'col-md-8' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers__["c" /* Drones */], null)
+				)
+			)
+		);
+	}
+}
+/* unused harmony default export */ var _unused_webpack_default_export = (DroneHome);
+
+/***/ }),
+/* 583 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class Footer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+	render() {
+		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"footer",
+			{ id: "footer" },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"p",
+				{ className: "copyright" },
+				"Copyrights \xA9 2017."
+			)
+		);
+	}
+}
+/* harmony default export */ __webpack_exports__["a"] = (Footer);
+
+/***/ }),
+/* 584 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+	render() {
+		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"header",
+			{ id: "header" },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"div",
+				{ className: "logo" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: "icon fa-plane" })
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"div",
+				{ className: "content" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"div",
+					{ className: "inner" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"h1",
+						null,
+						"Dronito"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"p",
+						null,
+						"System monitorowania terenu zamkni\u0119tego",
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+						"bezza\u0142ogowymi statkami powietrznymi"
+					)
+				)
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"nav",
+				null,
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"ul",
+					null,
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#intro" },
+							"Intro"
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#work" },
+							"Work"
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#about" },
+							"About"
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#contact" },
+							"Contact"
+						)
+					)
+				)
+			)
+		);
+	}
+
+}
+/* harmony default export */ __webpack_exports__["a"] = (Header);
+
+/***/ }),
+/* 585 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+	render() {
+		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"div",
+			{ id: "main" },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"article",
+				{ id: "intro" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"h2",
+					{ className: "major" },
+					"Intro"
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"span",
+					{ className: "image main" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "images/pic01.jpg", alt: "" })
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"p",
+					null,
+					"Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my ",
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"a",
+						{ href: "#work" },
+						"awesome work"
+					),
+					"."
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula."
+				)
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"article",
+				{ id: "work" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"h2",
+					{ className: "major" },
+					"Work"
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"span",
+					{ className: "image main" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "images/pic02.jpg", alt: "" })
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"p",
+					null,
+					"Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices."
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"p",
+					null,
+					"Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus."
+				)
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"article",
+				{ id: "about" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"h2",
+					{ className: "major" },
+					"About"
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"span",
+					{ className: "image main" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "images/pic03.jpg", alt: "" })
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet."
+				)
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"article",
+				{ id: "contact" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"h2",
+					{ className: "major" },
+					"Contact"
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"form",
+					{ method: "post", action: "#" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"div",
+						{ className: "field half first" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"label",
+							{ "for": "name" },
+							"Name"
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "name", id: "name" })
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"div",
+						{ className: "field half" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"label",
+							{ "for": "email" },
+							"Email"
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "email", id: "email" })
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"div",
+						{ className: "field" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"label",
+							{ "for": "message" },
+							"Message"
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { name: "message", id: "message", rows: "4" })
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"ul",
+						{ className: "actions" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"li",
+							null,
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "Send Message", className: "special" })
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"li",
+							null,
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "reset", value: "Reset" })
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"ul",
+					{ className: "icons" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#", className: "icon fa-twitter" },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								"span",
+								{ className: "label" },
+								"Twitter"
+							)
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#", className: "icon fa-facebook" },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								"span",
+								{ className: "label" },
+								"Facebook"
+							)
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#", className: "icon fa-instagram" },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								"span",
+								{ className: "label" },
+								"Instagram"
+							)
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"li",
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "#", className: "icon fa-github" },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								"span",
+								{ className: "label" },
+								"GitHub"
+							)
+						)
+					)
+				)
+			)
+		);
+	}
+}
+/* harmony default export */ __webpack_exports__["a"] = (Content);
 
 /***/ })
 /******/ ]);

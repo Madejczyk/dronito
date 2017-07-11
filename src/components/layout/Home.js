@@ -1,17 +1,12 @@
 import React, {Component} from 'react'
-import {Drones} from '../containers'
+import {Content, Footer, Header} from "./"
 class Home extends Component{
 	render(){
 		return(
-			<div className='container'>
-				<div className='row'>
-					<div className='col-md-4'>
-						Account
-					</div>
-					<div className='col-md-8'>
-						<Drones />
-					</div>
-				</div>
+			<div id="wrapper">
+				<Header />
+				<Content />
+				<Footer/>
 			</div>
 		)
 	}

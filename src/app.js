@@ -7,7 +7,6 @@ import {Provider} from 'react-redux'
 const app = (
 	<Provider store={store.configureStore()}>
 	<div>
-		Dronito
 		<Home />
 	</div>
 	</Provider>

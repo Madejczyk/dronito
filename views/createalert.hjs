@@ -2,13 +2,16 @@
 <html>
   <head>
     <title>{{ title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets-dark/css/main.css" />
   </head>
   <body>
     	<h1>Create Alert</h1>
 		<form action="/api/alert" method="post">
-		   	<input name="lat" type="text" placeholder="Latitude" />
-			<input name="lng" type="text" placeholder="Longitude" />
-			<input name="key" type="text" placeholder="Key" />
+		   	<input name="lat" type="text" placeholder="Latitude" /><br/>
+			<input name="lng" type="text" placeholder="Longitude" /><br/>
+			<input name="key" type="text" placeholder="Key" /></br>
 			<input type="submit" value="Create Alert" />
 		</form>
   </body>

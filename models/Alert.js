@@ -5,7 +5,7 @@ var AlertSchema = new mongoose.Schema({
 		lat: {type: Number, default:0},
 		lng: {type: Number, default:0}
 	},
-	key: {type: String, default:''},
+	key: {type: String, trim: true, default:''},
 	defaultAnimation: {type: Number, default:2},
 	timestamp: {type:Date, default:Date.now}
 })
