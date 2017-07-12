@@ -3,6 +3,7 @@ import CreateAlert from  './CreateAlert'
 import CreateComment from './CreateComment'
 import CreateDrone from './CreateDrone'
 import CreateZone from './CreateZone'
+import ToggleBar from './ToggleBar'
 import Zone from './Zone'
 
 
@@ -12,5 +13,6 @@ export {
 	CreateComment,
 	CreateDrone,
 	CreateZone,
+	ToggleBar,
 	Zone
 }

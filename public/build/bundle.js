@@ -39359,11 +39359,14 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Alerts__ = __webpack_require__(573);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Comments__ = __webpack_require__(574);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Drones__ = __webpack_require__(586);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Zones__ = __webpack_require__(588);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Widget__ = __webpack_require__(595);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Zones__ = __webpack_require__(588);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Alerts__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__Comments__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__Drones__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__Zones__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__Widget__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__Zones__["a"]; });
+
 
 
 
@@ -39381,13 +39384,16 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CreateComment__ = __webpack_require__(577);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CreateDrone__ = __webpack_require__(578);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__CreateZone__ = __webpack_require__(579);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Zone__ = __webpack_require__(580);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ToggleBar__ = __webpack_require__(597);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Zone__ = __webpack_require__(580);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Comment__["a"]; });
 /* unused harmony reexport CreateAlert */
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__CreateComment__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__CreateDrone__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_4__CreateZone__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_5__Zone__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_5__ToggleBar__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__Zone__["a"]; });
+
 
 
 
@@ -39444,6 +39450,16 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 		commentElement: {
 			borderBottom: '1px solid #ccc',
 			marginBottom: 16
+		}
+	},
+	widget: {
+		title: {
+			position: 'fixed',
+			width: 240,
+			bottom: 0,
+			right: 0,
+			padding: 6,
+			textAlign: 'right'
 		}
 	},
 	zone: {
@@ -39562,7 +39578,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 						{ className: "field half first" },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							"label",
-							{ "for": "name" },
+							null,
 							"Name"
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "name", id: "name" })
@@ -39572,7 +39588,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 						{ className: "field half" },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							"label",
-							{ "for": "email" },
+							null,
 							"Email"
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "email", id: "email" })
@@ -39582,7 +39598,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 						{ className: "field" },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							"label",
-							{ "for": "message" },
+							null,
 							"Message"
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { name: "message", id: "message", rows: "4" })
@@ -40114,6 +40130,15 @@ class Zone extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 		commentElement: {
 			borderBottom: '1px solid #ccc',
 			marginBottom: 16
+		}
+	},
+	widget: {
+		alerts: {
+			position: 'fixed',
+			width: 240,
+			bottom: 0,
+			right: 0,
+			border: 'solid 1px #ffffff'
 		}
 	},
 	zone: {
@@ -46226,7 +46251,7 @@ class Zones extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				'li',
 				{ key: i },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__presentation__["e" /* Zone */], { index: i, select: this.selectZone.bind(this), isSelected: selected, currentZone: zone })
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__presentation__["f" /* Zone */], { index: i, select: this.selectZone.bind(this), isSelected: selected, currentZone: zone })
 			);
 		});
 
@@ -46302,9 +46327,12 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						"p",
 						null,
-						"System monitorowania terenu zamkni\u0119tego",
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-						"bezza\u0142ogowymi statkami powietrznymi"
+						"Closed area monitoring system"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"p",
+						null,
+						"using Unmanned aerial vehicle"
 					)
 				)
 			),
@@ -46320,7 +46348,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							"a",
 							{ href: "#intro" },
-							"Intro"
+							"Zone"
 						)
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -46329,7 +46357,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							"a",
 							{ href: "#work" },
-							"Work"
+							"Drones"
 						)
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -46338,7 +46366,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							"a",
 							{ href: "#about" },
-							"About"
+							"Alerts"
 						)
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -46366,16 +46394,20 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1____ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers__ = __webpack_require__(567);
+
+
 
 
 class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 	render() {
 		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-			"div",
-			{ id: "wrapper" },
+			'div',
+			{ id: 'wrapper' },
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["c" /* Header */], null),
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["a" /* Content */], null),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["b" /* Footer */], null)
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["b" /* Footer */], null),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__containers__["d" /* Widget */], null)
 		);
 	}
 }
@@ -46482,7 +46514,7 @@ class ZoneHome extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
 					{ className: 'col-md-4' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers__["d" /* Zones */], null)
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers__["e" /* Zones */], null)
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
@@ -46495,6 +46527,99 @@ class ZoneHome extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 }
 
 /* unused harmony default export */ var _unused_webpack_default_export = (ZoneHome);
+
+/***/ }),
+/* 594 */,
+/* 595 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__presentation__ = __webpack_require__(568);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles__ = __webpack_require__(581);
+
+
+
+
+class Widget extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+	constructor() {
+		super();
+		this.state = {
+			showAlerts: false,
+			alerts: []
+		};
+	}
+
+	componentDidMount() {
+		firebase.database().ref('messages/').on('value', snapshot => {
+			const currentAlerts = snapshot.val();
+
+			if (currentAlerts != null) {
+				this.setState({
+					alerts: currentAlerts
+				});
+			}
+		});
+	}
+
+	toggleAlerts() {
+		this.setState({
+			showAlerts: !this.state.showAlerts
+		});
+	}
+
+	render() {
+		const style = __WEBPACK_IMPORTED_MODULE_2__styles__["a" /* default */].widget;
+		const currentAlert = this.state.alerts.map((ale, i) => {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'li',
+				{ key: ale.id },
+				ale.text
+			);
+		});
+
+		if (this.state.showAlerts) {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ style: style.alerts },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'ol',
+					null,
+					currentAlert
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__presentation__["e" /* ToggleBar */], { onToggle: this.toggleAlerts.bind(this) })
+			);
+		}
+
+		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__presentation__["e" /* ToggleBar */], { onToggle: this.toggleAlerts.bind(this) });
+	}
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Widget);
+
+/***/ }),
+/* 596 */,
+/* 597 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles__ = __webpack_require__(570);
+var _this = this;
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (props => {
+	const style = __WEBPACK_IMPORTED_MODULE_1__styles__["a" /* default */].widget;
+	return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+		'div',
+		{ onClick: props.onToggle.bind(_this), style: style.title },
+		'Current alerts'
+	);
+});
 
 /***/ })
 /******/ ]);

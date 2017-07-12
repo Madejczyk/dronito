@@ -10,15 +10,15 @@ class Header extends Component{
 				<div className="content">
 					<div className="inner">
 						<h1>Dronito</h1>
-						<p>System monitorowania terenu zamkniętego<br/>
-						bezzałogowymi statkami powietrznymi</p>
+						<p>Closed area monitoring system</p>
+						<p>using Unmanned aerial vehicle</p>
 					</div>
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#work">Work</a></li>
-						<li><a href="#about">About</a></li>
+						<li><a href="#intro">Zone</a></li>
+						<li><a href="#work">Drones</a></li>
+						<li><a href="#about">Alerts</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>

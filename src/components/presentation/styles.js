@@ -13,6 +13,16 @@ export default {
 			marginBottom: 16
 		}
 	},
+	widget:{
+		title:{
+			position:'fixed',
+			width:240,
+			bottom:0,
+			right:0,
+			padding:6,
+			textAlign: 'right'
+		}
+	},
 	zone:{
 		container:{
 			background: '#f9f9f9',

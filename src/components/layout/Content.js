@@ -27,15 +27,15 @@ class Content extends Component{
 					<h2 className="major">Contact</h2>
 					<form method="post" action="#">
 						<div className="field half first">
-							<label for="name">Name</label>
+							<label>Name</label>
 							<input type="text" name="name" id="name" />
 						</div>
 						<div className="field half">
-							<label for="email">Email</label>
+							<label>Email</label>
 							<input type="text" name="email" id="email" />
 						</div>
 						<div className="field">
-							<label for="message">Message</label>
+							<label>Message</label>
 							<textarea name="message" id="message" rows="4"></textarea>
 						</div>
 						<ul className="actions">

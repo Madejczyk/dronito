@@ -13,6 +13,15 @@ export default {
 			marginBottom: 16
 		}
 	},
+	widget:{
+		alerts:{
+			position:'fixed',
+			width:240,
+			bottom:0,
+			right:0,
+			border: 'solid 1px #ffffff'
+		}
+	},
 	zone:{
 		container:{
 			background: '#f9f9f9',
