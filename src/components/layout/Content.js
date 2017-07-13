@@ -25,14 +25,14 @@ class Content extends Component{
 
 				<article id="contact">
 					<h2 className="major">Contact</h2>
-					<form method="post" action="#">
+					<form method="post" action="/mail/send">
 						<div className="field half first">
 							<label>Name</label>
 							<input type="text" name="name" id="name" />
 						</div>
 						<div className="field half">
 							<label>Email</label>
-							<input type="text" name="email" id="email" />
+							<input type="text" name="sender" id="email" />
 						</div>
 						<div className="field">
 							<label>Message</label>

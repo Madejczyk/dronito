@@ -5622,8 +5622,8 @@ module.exports = ReactBrowserEventEmitter;
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Alerts__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__Comments__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__Drones__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__Widget__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__Zones__["a"]; });
+/* unused harmony reexport Widget */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_4__Zones__["a"]; });
 
 
 
@@ -27265,7 +27265,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"form",
-					{ method: "post", action: "#" },
+					{ method: "post", action: "/mail/send" },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						"div",
 						{ className: "field half first" },
@@ -27284,7 +27284,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 							null,
 							"Email"
 						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "email", id: "email" })
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "sender", id: "email" })
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						"div",
@@ -38047,7 +38047,7 @@ class Widget extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 	}
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Widget);
+/* unused harmony default export */ var _unused_webpack_default_export = (Widget);
 
 /***/ }),
 /* 383 */
@@ -38264,8 +38264,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 			{ id: 'wrapper' },
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["c" /* Header */], null),
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["a" /* Content */], null),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["b" /* Footer */], null),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__containers__["d" /* Widget */], null)
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1____["b" /* Footer */], null)
 		);
 	}
 }
@@ -46505,7 +46504,7 @@ class ZoneHome extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
 					{ className: 'col-md-4' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers__["e" /* Zones */], null)
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers__["d" /* Zones */], null)
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
