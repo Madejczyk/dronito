@@ -19,6 +19,7 @@ mongoose.connect(process.env.DB_URL, function(err,res){
 var index = require('./routes/index')
 var api = require('./routes/api')
 var account = require('./routes/account')
+var mail = require('./routes/mail')
 var app = express()
 
 // view engine setup
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', index)
 app.use('/api', api)
 app.use('/account', account)
+app.use('/mail', mail)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
