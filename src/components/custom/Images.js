@@ -12,6 +12,7 @@ class Images extends Component{
 	}
 
 	uploadFile(files){
+
 		const image = files[0]
 
 		const cloudName ='madejczyk'

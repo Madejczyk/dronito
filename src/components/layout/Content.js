@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
+import styles from './styles'
 
 class Content extends Component{
 	render(){
+		const style = styles.contact
 		return(
 			<div id="main">
 				<article id="intro">
@@ -24,7 +26,10 @@ class Content extends Component{
 				</article>
 
 				<article id="contact">
-					<h2 className="major">Contact</h2>
+					<h2 className="major">
+						C<a href="https://github.com/Madejczyk/dronito" className="icon fa-github"><span className="label">GitHub</span></a>
+						ntact
+					</h2>
 					<form method="post" action="/mail/send">
 						<div className="field half first">
 							<label>Name</label>
@@ -36,19 +41,13 @@ class Content extends Component{
 						</div>
 						<div className="field">
 							<label>Message</label>
-							<textarea name="message" id="message" rows="4"></textarea>
+							<textarea style={style.textArea} name="message" id="message" rows="3"></textarea>
 						</div>
 						<ul className="actions">
 							<li><input type="submit" value="Send Message" className="special" /></li>
 							<li><input type="reset" value="Reset" /></li>
 						</ul>
 					</form>
-					<ul className="icons">
-						<li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-						<li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-						<li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-						<li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
-					</ul>
 				</article>
 			</div>
 		)

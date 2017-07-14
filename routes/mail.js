@@ -27,11 +27,12 @@ router.post('/:action', (req, res, next) => {
 				})
 				return
 			}
-		  
-			res.json({
+
+		  	res.render('index', { title: 'Dronito' })
+			/*res.json({
 				confirmation: 'success',
 				message: response
-			})
+			})*/
 		})
 		return
 	}

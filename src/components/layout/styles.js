@@ -13,6 +13,11 @@ export default {
 			marginBottom: 16
 		}
 	},
+	contact:{
+		textArea:{
+			resize: 'none'
+		}
+	},
 	zone:{
 		container:{
 			background: '#f9f9f9',
