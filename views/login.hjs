@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="/assets-dark/css/main.css" />
   </head>
   <body>
-    <div id="wrapper" class="content">
-		  <form action="/account/login" method="post" style="text-align: center">
-        <h1>Login</h1>
-  		  <input name="email" type="text" placeholder="Email" /><br/>
-  			<input name="password" type="password" placeholder="Password" /><br/>
-  			<input type="submit" value="Login" />
-		</form>
-    </div>
+    <div id="wrapper">
+      <div id="header">
+  		  <form action="/account/login" method="post">
+          <h1>Login</h1>
+    		  <input name="email" type="text" placeholder="Email" /><br/>
+    			<input name="password" type="password" placeholder="Password" /><br/>
+    			<input type="submit" value="Login" />
+  		</form>
+      </div>
+    <div>
   </body>
 </html>
