@@ -4,10 +4,11 @@ var favicon = require('serve-favicon')
 var logger = require('morgan')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
+var passport = require('passport')
 var mongoose = require('mongoose')
 require('dotenv').config()
 
-mongoose.connect(process.env.DB_URL, function(err,res){
+mongoose.connect(process.env.DB_URL_LOCAL, function(err,res){
 	if (err){
 		console.log('Database connection failed: ' + err)
 	}
@@ -33,6 +34,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', index)
 app.use('/api', api)

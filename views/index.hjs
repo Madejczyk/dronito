@@ -11,25 +11,11 @@
     <div id="bg">
       <div id="root"></div>
     </div> 
-
     
-    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-    <script>
-      var config = {
-        apiKey: "AIzaSyCzwn6oL4Tb7Sndfe3t98V8ij74fY-I2kM",
-        authDomain: "dronito-f6cbf.firebaseapp.com",
-        databaseURL: "https://dronito-f6cbf.firebaseio.com",
-        projectId: "dronito-f6cbf",
-        storageBucket: "dronito-f6cbf.appspot.com",
-        messagingSenderId: "597663087532"
-      };
-      firebase.initializeApp(config);
-    </script>
     <script src="/assets-dark/js/jquery.min.js"></script>
     <script src="/assets-dark/js/skel.min.js"></script>
     <script src="/assets-dark/js/util.js"></script>
     <script src="/assets-dark/js/main.js"></script>
- 	  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDxNOhGKTD5iU9-fO8QF-6bhU50iq2Fs8"></script>
     <script src="/build/bundle.js"></script>
   </body>
 </html>

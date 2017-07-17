@@ -16,10 +16,8 @@ class Header extends Component{
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#intro">Zones</a></li>
-						<li><a href="#work">Drones</a></li>
-						<li><a href="#flight">Flights</a></li>
-						<li><a href="#about">Alerts</a></li>
+						<li><a href="/login">Login</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
 			</header>

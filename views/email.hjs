@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+    @media screen and (max-width: 600px){
+      .width-full{
+      width:100% !important;
+      } 
+      .stack-column{
+        display: block !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      .stack-column-two{
+        padding-top: 20px !important;
+      }     
+    }
+    @media screen and (min-width: 321px) and (max-width: 375){
+      .email-title{
+        font-size: 30px !important;
+        line-height: 30px !important;
+      }
+      .email-slogan{
+        font-size: 15px !important;
+        line-height: 15px !important
+      }
+    }
+    </style>
+    <!--[if gte mso 12 && lt mso 15]>
+    <style>
+      .email-slogan {
+        font-size: 24px !important;
+        line-height 24px !important;
+      }
+    </style>
+    <![endif]-->
+    <!--[if gte mso 12]>
+    <style>
+      td {
+        mso-line-height-rule: exactly;
+      }
+      .email-title {
+        padding-bottom: 0 !important;
+      }
+    </style>
+    <![endif]-->
+  </head>
+  <body style="margin: 0, padding: 0;">
+    <table border="0" cellpadding="0" cellspacing="0" class="width-full" width="100%"
+      style="background-color: #413D42;
+/*      background-image: url('http://res.cloudinary.com/madejczyk/image/upload/v1500061310/bg.jpg');*/
+      ">
+      <tr>
+        <td style="padding: 0 10px;">
+           <table align="center" class="width-full" 
+              border="0" 
+              cellpadding="0" 
+              cellspacing="0"
+              width="100%" 
+              style="text-align: center; max-width: 600px;">
+              <tr>
+                <td class="email-title" style="
+                    color: #FFFFFF;
+                    font-family: 'Arial Black', 'GillSans-Bold', 'Arial-Bold', Arial, sans-serif;
+                    font-size: 74px;
+                    line-height: 74px
+                    margin: 0;
+                    text-transform: uppercase;">
+                  Dronito platform
+                </td>
+              </tr>
+              <tr>
+                <td class="email-slogan" style="
+                    border: 1px solid #FFFFFF;
+                    color: #FFFFFF;
+                    font-family: 'Arial Black', 'GillSans-Bold', 'Arial-Bold', Arial, sans-serif;
+                    font-size: 26px;
+                    line-height: 26px;
+                    margin: 0;
+                    padding: 10px 0;
+                    text-transform: uppercase;">
+                    Added a new alert!
+                </td>
+              </tr>
+              <tr>
+                <td>
+<!--                   <img src=""
+                      style="display: block;
+                      max-width: 100%;"
+                    width="600" /> -->
+                                <div><!--[if mso]>
+  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://dronito.herokuapp.com/" style="height:40px;v-text-anchor:middle;width:600px;" arcsize="10%" strokecolor="#1e3650" fill="t">
+    <v:fill type="tile" src="https://i.imgur.com/0xPEf.gif" color="#556270" />
+    <w:anchorlock/>
+    <center style="color:#ffffff;font-family: Arial sans-serif;font-size:20px;font-weight:bold; text-trasform: uppercase;">Open platform</center>
+  </v:roundrect>
+<![endif]--><a href="https://dronito.herokuapp.com/"
+style="background-color:#556270;background-image:url(https://i.imgur.com/0xPEf.gif);border:1px solid #1e3650;border-radius:4px;color:#ffffff;display:inline-block;font-family:Arial, sans-serif;font-size:20px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:600px;text-transform: uppercase;-webkit-text-size-adjust:none;mso-hide:all;">Open platform</a></div>
+                </td>
+              </tr>
+            </table>
+            <table align="center" class="width-full" 
+              border="0" 
+              cellpadding="0" 
+              cellspacing="0" 
+              width="100%" 
+              style="text-align: center; max-width: 600px">
+              <tr>
+                <td class="stack-column" style="text-align: center;">
+                  <div style="display: inline-block;">
+                    <table align="left" width="300" style="border: 1px solid #FFFFFF;">
+                      <tr>
+                        <td style="
+                            font-family: 'Arial Black', 'GillSans-Bold', 'Arial-Bold', Arial, sans-serif;
+                            color: #FFFFFF;
+                            font-size: 24px;
+                            line-height: 24px;
+                            padding-top: 20px">
+                            {{currertDate}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="
+                            font-family: 'Arial Black', 'GillSans-Bold', 'Arial-Bold', Arial, sans-serif;
+                            color: #FFFFFF;
+                            font-size: 30px;
+                            font-weight: bold;
+                            line-height: 30px;
+                            padding-bottom: 20px;
+                            padding-top: 5px">
+                            {{currentTime}}
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+                <td class="stack-column stack-column-two" style="text-align: center;">
+                  <div style="display: inline-block;">
+                    <table align="left" width="300" style="border: 1px solid #FFFFFF;">
+                      <tr>
+                        <td style="
+                            font-family: 'Arial Black', 'GillSans-Bold', 'Arial-Bold', Arial, sans-serif;
+                            color: #FFFFFF;
+                            font-size: 27px;
+                            line-height: 27px;
+                            padding-top: 20px">
+                            Lat: {{latPosition}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="
+                            font-family: 'Arial Black', 'GillSans-Bold', 'Arial-Bold', Arial, sans-serif;
+                            color: #FFFFFF;
+                            font-size: 27px;
+                            line-height: 27px;
+                            padding-bottom: 20px;
+                            padding-top: 5px">
+                            Lng: {{lngPosition}} 
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <table align="center" class="width-full" 
+                  border="0" 
+                  cellpadding="0" 
+                  cellspacing="0" 
+                  width="600" 
+                  style="text-align: center;">
+                  <tr>
+                    <td style="
+                    border: 1px solid #FFFFFF;
+                    color: #FFFFFF;
+                    font-family: 'Arial Black', 'GillSans-Bold', 'Arial-Bold', Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 14px;
+                    margin: 0;
+                    padding: 10px 10px;
+                    text-transform: uppercase;">
+                      Jakub Madejczyk
+                    </td>
+                  </tr>
+                  </table>
+              </tr>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

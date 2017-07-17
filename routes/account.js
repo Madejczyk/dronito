@@ -3,7 +3,7 @@ var router = express.Router()
 var controllers = require('../controllers')
 var bcrypt = require('bcryptjs')
 
-router.post('/login', (req, res, next) =>{
+router.post('/login', (req, res, next) => {
 	var credentials = req.body 
 	controllers.profile
 	.get({email: credentials.email},true)
@@ -20,24 +20,27 @@ router.post('/login', (req, res, next) =>{
 
 		var passwordCorrect = bcrypt.compareSync(credentials.password, profile.password)
 		if (passwordCorrect == false){
-			res.json({
+			/*res.json({
 				confirmation: 'fail',
 				message: 'Incorrect password'				
-			})
+			})*/
+			res.redirect('/login')
 			return
 		}
 
-		res.json({
+/*		res.json({
 			confirmation: 'success',
 			profile: profile.summary()
-		})
+		})*/
+		res.render('dashboard', { title: profile.username})
 	})
 
 	.catch((err) => {
-		res.json({
+		res.redirect('/login')
+		/*res.json({
 			confirmation: 'fail',
 			message: err
-		})
+		})*/
 	})
 })
 

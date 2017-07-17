@@ -25,7 +25,8 @@ class Map extends Component{
 		})
 	}
 
-	render(){	
+	render(){
+		//Default values if props didn't exists 	
 		const markers = this.props.markers || []	
 		return(
 			<GoogleMap
